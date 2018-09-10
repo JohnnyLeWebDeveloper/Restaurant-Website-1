@@ -1,0 +1,20 @@
+@font-face{
+	font-family:"Focus";
+	src:url("../fonts/Focus.eot") format("eot"),
+	url("../fonts/Focus.svg#Focus") format("svg"),
+	url("../fonts/Focus.woff") format("woff"),
+		url("../fonts/Focus.otf") format("otf"),
+	url("../fonts/Focus.ttf") format("truetype");
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+
+
+/*	--------------
+
+	font-family: 'Marck Script', cursive;
+	
+------------	*/

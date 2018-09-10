@@ -1,0 +1,946 @@
+/* ------------------------- RESET CSS -------------------------- */
+
+html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+ address, big, cite, code, del, dfn, em, img, ins, kbd, q, s,
+ samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
+ dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+ tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+ figcaption, footer, header, hgroup, menu, nav, output, ruby, section,
+ summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    line-height: normal;
+    margin:0;
+    width:100%;
+    height:100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+
+}
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    font-weight: normal;
+}
+blockquote {
+    quotes: none;
+}
+blockquote:before, blockquote:after {
+    content: '';
+    content: none;
+}
+del {
+    text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a img {
+    border: none;
+}
+
+div, input, p, textarea {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*:focus
+{
+    outline: none;  /* REMOVES ANY ON FOCUS ON DIVS */
+}
+
+a:link {text-decoration:none;}
+a:hover {text-decoration:none;}
+a:active {text-decoration:none;}
+a:visited {text-decoration:none;}
+
+/* ------------------------- HELPER CLASSES -------------------------- */
+
+.rel {
+    position: relative;
+}
+
+.clear {
+    clear: both;
+}
+
+.flexCenter {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  -webkit-flex-align: center;
+  align-items: center;
+}
+
+.flexColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flexRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+/* ------------------------- CSS -------------------------- */
+
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/*------------------------------------
+-------- NAVIGATION --------
+-------------------------------------*/
+
+.navbar{
+	background:rgb(0,0,0, .3) !important;
+}
+.navbar .menu_bar .nav-item{
+	margin:0px 10px;
+}
+.navbar .menu_bar .nav-item .nav-link{
+	color:#FFFFFF;
+	font-family:Focus;
+	font-weight:normal;
+	font-size:15px;
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+}
+.navbar .menu_bar .nav-item .nav-link:hover{
+	color:#fb5231 !important;
+}
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link{
+	color:#fb5231 !important;
+}
+.navbar .social_area .nav-item{
+	margin:0px 10px;
+}
+.navbar .social_area .nav-item .nav-link{
+	color:#6d7080;
+	font-size:20px;
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+}
+.navbar .social_area .nav-item .nav-link:hover{
+	color:#FFFFFF;
+}
+.navbar-dark .navbar-toggler{
+	color:#FFFFFF;
+	border:1px solid #FFFFFF;
+}
+
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+@media (max-width: 575.98px) {
+	.navbar{
+		background:rgb(0,0,0, .7) !important;
+	}
+	.navbar .collapse{
+		height:100vh;
+	}
+	.navbar .navbar-brand img{
+		width:150px;
+	}
+	.navbar .menu_bar .nav-item{
+		width:150px;
+		margin:5px auto;
+		border-bottom:1px solid #fb5231;
+		padding-bottom:3px;
+	}
+	.navbar .social_area .nav-item{
+		margin:3px 0px;
+	}
+	.navbar .social_area .nav-item .nav-link{
+		padding:0px 0px;
+	}
+	.navbar .menu_bar .nav-item:last-child{
+		border-bottom:none;
+	}
+	.navbar .social_area .nav-item{
+		float:none;
+		display:inline-block;
+	}	
+}
+
+/*	Small devices (landscape phones, 576px and up)	*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.navbar{
+		background:rgb(0,0,0, .7) !important;
+	}
+	.navbar .navbar-brand img{
+		width:150px;
+	}
+	.navbar .menu_bar .nav-item{
+		width:150px;
+		margin:5px auto;
+		border-bottom:1px solid #fb5231;
+		padding-bottom:3px;
+	}
+	.navbar .social_area .nav-item{
+		margin:3px 0px;
+	}
+	.navbar .social_area .nav-item .nav-link{
+		padding:0px 0px;
+	}
+	.navbar .menu_bar .nav-item:last-child{
+		border-bottom:none;
+	}
+	.navbar .social_area .nav-item{
+		float:none;
+		display:inline-block;
+	}	
+}
+
+/*	Medium devices (tablets, 768px and up)	*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.navbar .navbar-brand img{
+		width:120px;
+	}
+	.navbar .menu_bar .nav-item{
+		margin:0px;
+	}
+	.navbar .menu_bar .nav-item .nav-link{
+		font-size:12px;
+	}
+	.navbar .social_area .nav-item .nav-link{
+		font-size:16px;
+	}	
+}
+
+/*------------------------------------
+-------- HEADER --------
+-------------------------------------*/
+
+.header{
+	background:url(images/header_bg.jpg) no-repeat;
+	background-position:center center;
+	background-size:cover;
+	height:100vh;
+	width:100%;
+}
+.header .content{
+	padding-top:180px;
+}
+.header .content h1{
+	color:#FFFFFF;
+	font-family: 'Marck Script', cursive;
+	font-weight:400;
+	font-size:86px;
+	line-height:110px;
+	background:url(images/border_bottom_white.png) no-repeat;
+	background-position:bottom center;
+	padding-bottom:50px;
+}
+.header .content .booking_calling{
+	margin-top:30px;
+}
+.header .content .booking_calling ul{
+	margin-bottom:0px;
+}
+.header .content .booking_calling ul li{
+	list-style:none;
+	display:inline-block;
+	margin:0px 7px;
+}
+.header .content .booking_calling ul li a{
+	text-decoration:none;
+	color:#FFFFFF;
+	font-family:Focus;
+	font-weight:bold;
+	font-size:16px;
+	display:block;
+	padding:10px 20px;
+	padding-bottom:5px;
+	line-height:24px;
+	width:230px;
+	background:url(images/button_bg_white.png) repeat;
+	background-size:cover;
+	border:1px solid #FFFFFF;
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+}
+.header .content .booking_calling ul li a:hover{
+	background:url(images/button_bg_red.png) repeat;
+	background-size:cover;	
+}
+
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+@media (max-width: 575.98px) {
+	.header .content h1{
+		font-size:48px;
+		line-height:60px;
+	}
+	.header .content{
+		padding-top:150px;
+	}
+	.header .content .booking_calling ul li a{
+		width:150px;
+		font-size:12px;
+		padding:5px 20px;
+		padding-bottom:0px;
+	}	
+}
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+@media (max-width: 435px){
+	.header .content h1{
+		font-size:32px;
+		line-height:40px;
+	}
+	.header .content{
+		padding-top:150px;
+	}
+	.header .content .booking_calling ul li a{
+		font-size:10px;
+		width:110px;
+	}	
+}
+
+/*	Small devices (landscape phones, 576px and up)	*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.header .content h1{
+		font-size:48px;
+		line-height:60px;
+	}
+	.header .content .booking_calling ul li a{
+		width:150px;
+		padding:5px 20px;
+		padding-bottom:0px;
+		font-size:14px;
+	}	
+}
+
+/*	Medium devices (tablets, 768px and up)	*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.header .content{
+		padding-top:120px;
+	}	
+	.header .content h1{
+		font-size:48px;
+		line-height:60px;
+	}
+	.header .content .booking_calling ul li a{
+		width:150px;
+		padding:5px 20px;
+		padding-bottom:0px;
+		font-size:14px;
+	}	
+}
+
+/*	Large devices (desktops, 992px and up)	*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	.header .content{
+		padding-top:140px;
+	}
+	.header .content h1{
+		font-size:60px;
+		line-height:80px;
+	}
+	.header .content .booking_calling ul li a{
+		width:180px;
+	}	
+}
+
+/*------------------------------------
+-------- ABOUT US --------
+-------------------------------------*/
+
+.about_us{
+	background:url(images/about_us_bg.jpg) no-repeat;
+	background-position:center center;
+	background-size:cover;
+	width:100%;
+	height:100vh;
+	padding:80px 0px;	
+}
+.about_us .discover_stories{
+	max-width:520px;
+	margin:0px auto;
+	text-align:center;
+}
+.about_us .discover_stories h2{
+	color:#fb5231;
+	font-family: 'Marck Script', cursive;
+	font-weight:400;
+	font-size:36px;
+	background:url(images/border_bottom_red.png) no-repeat;
+	background-position:bottom center;
+	padding-bottom:20px;
+}
+.about_us .discover_stories p{
+	color:#4c4c4c;
+	font-family:Focus;
+	font-weight:normal;
+	font-size:16px;
+	line-height:24px;
+	margin:40px 0px;
+}
+
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+@media (max-width: 575.98px) {
+	.about_us{
+		padding:40px 0px;
+	}
+	.about_us .discover_stories p{
+		font-size:12px;
+		margin:10px 0px;
+	}	
+}
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+@media (max-width: 435px){
+	.about_us .discover_stories img{
+		width:150px;
+	}	
+}
+
+/*	Small devices (landscape phones, 576px and up)	*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.about_us{
+		padding:40px 0px;
+	}
+	.about_us .discover_stories p{
+		font-size:13px;
+		margin:20px 0px;
+	}	
+}
+
+/*	Medium devices (tablets, 768px and up)	*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.about_us{
+		padding:40px 0px;
+	}
+	.about_us .discover_stories p{
+		font-size:13px;
+		margin:20px 0px;
+	}	
+}
+
+/*	Large devices (desktops, 992px and up)	*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	.about_us{
+		padding:40px 0px;
+	}
+	.about_us .discover_stories p{
+		margin:20px 0px;
+		font-size:14px;
+	}	
+}
+
+/*------------------------------------
+-------- INGREDIENTS --------
+-------------------------------------*/
+
+.ingredients .images{
+	padding:150px 0px;	
+}
+.ingredients .images img{
+	margin-top:50px;
+}
+.ingredients .contents{
+	background:url(images/ingredientsb_bg.png) no-repeat;
+	background-position:center center;
+	background-size:cover;
+	padding:150px 80px;
+	text-align:center;
+	margin-bottom:0px;
+}
+.ingredients .contents h3{
+	color:#FFFFFF;
+	font-family: 'Marck Script', cursive;
+	font-weight:400;
+	font-size:36px;
+	background:url(images/border_bottom_white_2.png) no-repeat;
+	background-position:bottom center;
+	padding-bottom:30px;	
+}
+.ingredients .contents p{
+	color:#FFFFFF;
+	font-family:Focus;
+	font-weight:normal;
+	font-size:16px;
+	line-height:24px;
+	margin:40px 0px;	
+}
+
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+@media (max-width: 575.98px) {
+	.ingredients .images{
+		padding:40px 0px;
+	}
+	.ingredients .images img{
+		margin-top:0px;
+	}
+	.ingredients .contents{
+		padding:40px 30px;
+		margin-bottom:-3px;
+	}	
+}
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+@media (max-width: 420px){
+	.ingredients .contents .bottom img{
+		width:75px;
+		height:auto;
+	}	
+}
+
+/*	Small devices (landscape phones, 576px and up)	*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.ingredients .images{
+		padding:40px 0px;
+	}
+	.ingredients .images img{
+		margin-top:0px;
+	}
+	.ingredients .contents{
+		padding:40px 30px;
+		margin-bottom:-3px;
+	}	
+}
+
+/*	Medium devices (tablets, 768px and up)	*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.ingredients .contents{
+		margin:-8px 0px;
+		z-index:-9;
+		padding:40px 20px;
+	}
+	.ingredients .contents .bottom img{
+		width:90px;
+		height:auto;
+	}	
+}
+
+/*	Large devices (desktops, 992px and up)	*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	.ingredients .contents{
+		margin:-8px 0px;
+		z-index:-9;
+		padding:40px 20px;
+	}	
+}
+
+/*------------------------------------
+-------- MENU --------
+-------------------------------------*/
+
+.menu{
+	background:url(images/menu_bg.jpg) no-repeat;
+	background-position:center center;
+	background-size:cover;
+	padding:60px 0px;
+}
+.menu .menu_inner{
+	
+}
+.menu .menu_inner .single_menu{
+	max-width:480px;
+	margin-right:60px;
+	color:#FFFFFF;
+	margin-bottom:20px;
+}
+.menu .menu_inner .single_menu .single_item{
+	background:url(images/solid_border_bottom.png) no-repeat;
+	background-position:bottom center;
+	padding-bottom:20px;	
+}
+.menu .menu_inner .single_menu .single_item_no_border{
+	background:none;
+}
+.menu .menu_inner .single_menu h3{
+	color:#FFFFFF;
+	font-family: 'Marck Script', cursive;
+	font-weight:400;
+	font-size:36px;
+	background:url(images/border_bottom_red.png) no-repeat;
+	background-position:bottom center;
+	padding-bottom:30px;
+	text-align:center;
+	margin-bottom:20px;
+}
+.menu .menu_inner .single_menu h5{
+	color:#FFFFFF;
+	font-family:Focus;
+	font-weight:bold;
+	font-size:20px;
+	margin:10px 0px;
+	overflow:hidden;
+	padding-top:10px;
+}
+.menu .menu_inner .single_menu .special h5 .name{
+	position:relative;
+}
+.menu .menu_inner .single_menu .special h5 .name:after{
+	content:"Special";
+	position:absolute;
+	color:#FFFFFF;
+	background:url(images/button_bg_red.png) repeat;
+	padding:3px 10px;
+	right:-55px;
+	top:-10px;
+	font-family:Focus;
+	font-size:10px;
+	font-weight:400;
+}
+.menu .menu_inner .single_menu h5 .name{
+	float:left;
+}
+.menu .menu_inner .single_menu h5 .price{
+	float:right;
+}
+.menu .menu_inner .single_menu p{
+	color:#FFFFFF;
+	font-family:Focus;
+	font-weight:normal;
+	font-size:15px;	
+}
+
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+@media (max-width: 575.98px) {
+	.menu .menu_inner .single_menu{
+		margin-right:0px;
+	}	
+}
+
+/*------------------------------------
+-------- REVIEWS --------
+-------------------------------------*/
+
+.reviews{
+	background:#FFFFFF;
+	padding:80px 0px;
+	text-align:center;
+}
+.reviews .reviews_inner{
+	max-width:860px;
+	margin:0px auto;
+}
+.reviews .reviews_inner h2{
+	color:#333333;
+	font-family: 'Marck Script', cursive;
+	font-weight:400;
+	font-size:36px;
+	background:url(images/border_bottom_red.png) no-repeat;
+	background-position:bottom center;
+	padding-bottom:30px;
+	text-align:center;
+}
+.reviews .reviews_inner p{
+	color:#1a1f3b;
+	font-family:Focus;
+	font-weight:normal;
+	font-size:20px;
+	margin:30px 0px;
+}
+.reviews .reviews_inner h3{
+	color:#1a1f3b;
+	font-family: 'Marck Script', cursive;
+	font-weight:400;
+	font-size:32px;
+	margin-bottom:15px;
+}
+
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+@media (max-width: 435px){
+	.reviews .head_image{
+		width:200px;
+	}	
+}
+
+/*------------------------------------
+-------- RESERVATIONS --------
+-------------------------------------*/
+
+.reservations{
+	background:url(images/reservations_bg.jpg) no-repeat;
+	background-position:center center;
+	background-size:cover;
+	width:100%;
+	padding:60px 0px;
+}
+.reservations .reservations_inner{
+	max-width:960px;
+	margin:0px auto;
+}
+.reservations .reservations_inner .contents{
+	text-align:center;	
+}
+.reservations .reservations_inner .col-md-6{
+	max-width:450px;
+	margin:0px 15px;
+}
+.reservations .reservations_inner .left{
+	margin-top:20px;
+}
+.reservations .reservations_inner h3{
+	color:#fb5231;
+	font-family: 'Marck Script', cursive;
+	font-weight:400;
+	font-size:32px;
+	background:url(images/border_bottom_red.png) no-repeat;
+	background-position:bottom center;
+	padding-bottom:20px;
+	margin-bottom:10px;
+}
+.reservations .reservations_inner p{
+	color:#4c4c4c;
+	font-family:Focus;
+	font-weight:normal;
+	font-size:16px;
+	line-height:30px;
+	margin-bottom:40px;
+}
+.reservations .reservations_inner label{
+	color:#fb5231;
+	font-family:Focus;
+	font-weight:400;
+	font-size:14px;
+	margin-bottom:5px;
+}
+.reservations .reservations_inner input{
+	background:url(images/button_bg_white.png) repeat;
+	background-size:cover;
+	border-radius:0px;
+	border:1px solid #C8C6C6;
+	color:#a4a4a4;
+	font-family:Focus;
+	font-weight:400;
+	font-size:12px;
+	font-style:italic;
+	padding:7px 20px;
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+}
+.reservations .reservations_inner input:active,
+.reservations .reservations_inner input:focus,
+.reservations .reservations_inner input:hover{
+	border:1px solid #FB5535;
+}
+.reservations .reservations_inner .date{
+	position:relative;
+}
+.reservations .reservations_inner .date input{
+	
+}
+.reservations .reservations_inner .date i{
+	color:#7c7c7c;
+	font-size:12px;
+	position:absolute;
+	right:15px;
+	top:15px;
+}
+.reservations .reservations_inner .book_now button{
+	background:url(images/button_bg_red_2.png) repeat;
+	background-size:cover;
+	padding:10px 50px;
+	border-radius:0px;
+	border:1px solid #FA5534;
+	color:#FFFFFF;
+	font-family:Focus;
+	font-weight:400;
+	font-size:14px;
+	padding-bottom:5px;
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+}
+.reservations .reservations_inner .book_now button:hover{
+	background:url(images/button_bg_white.png) repeat;
+	background-size:cover;
+	color:#4c4c4c;
+}
+
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+@media (max-width: 575.98px) {
+	.reservations .reservations_inner .contents{
+		margin-top:20px;
+	}	
+}
+
+/*	Medium devices (tablets, 768px and up)	*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.reservations .reservations_inner .col-md-6{
+		margin:0px;
+	}
+	.reservations .reservations_inner .left{
+		margin-top:100px;
+	}	
+}
+
+/*	Large devices (desktops, 992px and up)	*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	.reservations .reservations_inner p{
+		margin-bottom:15px;
+	}	
+}
+
+/*------------------------------------
+-------- SCROLLTOP --------
+-------------------------------------*/
+
+.scrolltotop i{
+	color:#fff;
+	background:url(images/button_bg_red.png) repeat;
+	background-position:center center;
+	background-size:cover;
+	border:1px solid #FFFFFF;
+	width:35px;
+	height:40px;
+	font-size:24px;
+	line-height:40px;
+	text-align:center;
+	cursor:pointer;
+	border-radius:2px;
+	-webkit-transition:all 0.2s linear;
+	-moz-transition:all 0.2s linear;
+	transition:all 0.2s linear;
+	position:fixed;
+	bottom:0%;
+	right:4%;
+}
+.scrolltotop i:hover{
+	-webkit-box-shadow:0px 1px 5px #FB6D51, 0px -1px 5px #FB6D51,1px 0px 5px #FB6D51,-1px 0px 5px #FB6D51;
+	-moz-box-shadow:0px 1px 5px #FB6D51, 0px -1px 5px #FB6D51,1px 0px 5px #FB6D51,-1px 0px 5px #FB6D51;
+	box-shadow:0px 1px 5px #FB6D51, 0px -1px 5px #FB6D51,1px 0px 5px #FB6D51,-1px 0px 5px #FB6D51;
+}
+
+/*------------------------------------
+-------- FOOTER --------
+-------------------------------------*/
+
+.footer{
+	background:url(images/footer_bg.jpg) no-repeat;
+	background-position:center center;
+	background-size:cover;
+	padding:40px 0px;
+	color:#FFFFFF;
+}
+.footer .left_right{
+	text-align:center;
+	margin-top:40px;
+}
+.footer .left_right i{
+	color:#e3e6e6;
+	font-size:20px;
+	margin-bottom:15px;
+}
+.footer .left_right h4{
+	color:#969595;
+	font-family:Focus;
+	font-weight:400;
+	font-size:12px;
+	margin:5px 0px;
+	line-height:20px;
+}
+.footer .middle{
+	text-align:center;	
+}
+.footer .middle .social_icon{
+	margin:15px 0px;
+}
+.footer .middle ul{
+	margin-bottom:0px;
+}
+.footer .middle ul li{
+	display:inline-block;
+	margin:0px 5px;
+}
+
+.footer .middle ul li a i{
+	color:#6b6b6b;
+	background:#1A1E36;
+	font-size:15px;
+	width:35px;
+	height:35px;
+	line-height:35px;
+	border-radius:50%;
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+}
+.footer .middle ul li a i:hover{
+	color:#FFFFFF;
+	background:#FB5535;
+}
+.footer .middle p{
+	color:#969595;
+	font-family:Focus;
+	font-weight:400;
+	font-size:12px;
+	text-transform:uppercase;
+}
+
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+@media (max-width: 575.98px) {
+	.footer .left_right{
+		margin-top:0px;
+	}
+	.footer .middle{
+		margin:20px 0px;
+	}	
+}
+
+/*	Small devices (landscape phones, 576px and up)	*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.footer .col-md-4{
+		margin-bottom:20px;
+	}
+	.footer .left_right{
+		margin-top:0px;
+	}	
+}
+
+/*	Medium devices (tablets, 768px and up)	*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.footer .middle ul li a i{
+		width:24px;
+		height:24px;
+		line-height:24px;
+	}	
+}
